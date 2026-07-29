@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #FFF8F0;
+  color: #4E342E;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- wooden texture band (navbar / hero) ---------- */
+.wood-texture {
+  background-color: #4E342E;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255,255,255,0.03) 0px,
+      rgba(255,255,255,0.03) 2px,
+      transparent 2px,
+      transparent 6px
+    ),
+    linear-gradient(180deg, #5A3A2E 0%, #4E342E 60%, #402A22 100%);
+}
+
+/* ---------- handwritten section titles ---------- */
+.handwritten {
+  font-family: "Caveat", cursive;
+  font-weight: 600;
+  color: #6B8E23;
+  line-height: 1;
+}
+
+/* ---------- vintage divider: line + centered leaf ornament ---------- */
+.vintage-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #A3B18A;
+  margin: 2rem 0;
+}
+.vintage-divider::before,
+.vintage-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #A3B18A, transparent);
+}
+.vintage-divider span {
+  font-size: 1.1rem;
+}
+
+/* ---------- recipe card ---------- */
+.recipe-card {
+  position: relative;
+  background: #FFFFFF;
+  color: #4E342E;
+  border: 1px solid rgba(107,142,35,0.25);
+  box-shadow: 0 6px 16px rgba(78,52,46,0.12);
+}
+
+.leaf-badge {
+  position: absolute;
+  top: -10px;
+  right: 12px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #A3B18A;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(78,52,46,0.3);
+}
+
+/* ingredient / meta chip */
+.leaf-chip {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.01em;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #A3B18A; border-radius: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
